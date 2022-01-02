@@ -1,0 +1,21 @@
+footer {
+    flex-grow: 1;
+    width: 100%;
+    background-color: lightgrey;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    footer .container {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        > div:last-of-type {
+            margin-bottom: 8px;
+        }
+    }
+}

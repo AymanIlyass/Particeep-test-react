@@ -1,0 +1,25 @@
+select {
+    padding: .6em 1.5em .5em .8em;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDMuNzAzIDgzLjYyMiI+CiAgPHBhdGggZD0iTTE0MS40OTIgMi40OTdDMTM5LjcxLjY1IDEzNy41OTctLjI3IDEzNS4xNTYtLjI3SDkuMDExQzYuNTctLjI3IDQuNDU4LjY1IDIuNjc1IDIuNDk3Ljg5IDQuMzQ0IDAgNi41MjcgMCA5LjA1MmMwIDIuNTI0Ljg5MSA0LjcwOCAyLjY3NSA2LjU1NGw2My4wNzIgNjUuMjQ3YzEuNzg2IDEuODQ1IDMuODk3IDIuNzcgNi4zMzcgMi43N3M0LjU1My0uOTI1IDYuMzM1LTIuNzdsNjMuMDczLTY1LjI0OGMxLjc4MS0xLjg0NSAyLjY3Ni00LjAyOSAyLjY3Ni02LjU1M3MtLjg5NS00LjcwOC0yLjY3Ni02LjU1NXoiLz4KPC9zdmc+Cg==");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) 15px;
+    background-size: .65em auto, 100%;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+select:focus {
+    border-color: #aaa;
+    color: #222; 
+    outline: none;
+}
+
+select option {
+    font-weight: normal;
+}

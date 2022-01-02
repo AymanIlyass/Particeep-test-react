@@ -1,0 +1,184 @@
+@import '../../assets/css/colors';
+
+.movie {
+    position: relative;
+    flex-basis: 100%;
+    margin: 12px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 0 6px 0 #aaa;
+
+    h4 {
+        margin: 0;
+        text-align: left;
+        font-weight: 400;
+        font-style: italic;
+    }
+}
+
+.delete {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: 0;
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+    outline: none;
+    transform: rotate(0deg);
+    transition: transform .8s;
+
+    &:hover {
+        transform: rotate(270deg);
+    }
+}
+
+.close {
+    width: 20px;
+}
+
+
+/*  GAUGE
+  ============================== */
+
+.gauge-container {
+    position: relative;
+    overflow: hidden;
+
+    .indicator {
+        position: absolute;
+        width: 18px;
+        left: 50%;
+        transition: transform 1.5s cubic-bezier(.3, -.4, .6, 1.5);
+    }
+
+    .gauge {
+        width: 180px;
+    }
+}
+
+.gauge-inactive .indicator {
+    transform: translate(-50%, 43px) rotate(0deg)!important;
+    transition: transform 0s;
+}
+
+
+/*  EVALUATION USER
+  ============================== */
+
+.evaluation-buttons,
+.evaluation-count {
+    display: flex;
+    justify-content: space-around;
+    margin: 12px 0;
+}
+
+.dislike,
+.like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    transition: background-color .25s ease;
+    cursor: pointer;
+}
+
+.dislike {
+    padding-top: 8px;
+    background-color: $dislike;
+
+    &:hover,
+    :focus,
+    :active {
+        background-color:$dislikeAccent;
+    }
+}
+
+.like {
+    padding-bottom: 8px;
+    background-color: $like;
+
+    &:hover,
+    :focus,
+    :active {
+        background-color: $likeAccent;
+    }
+}
+
+.thumb {
+    width: 36px;
+}
+
+.evaluation-count p {
+    min-width: 75px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.evaluation-user {
+    height: 21px;
+    margin-top: 8px;
+}
+
+.evaluation-like {
+    background-color: $likeBg;
+}
+
+.evaluation-dislike {
+    background-color: $dislikeBg;
+}
+
+
+/*  CARDS SIZE
+  ============================== */
+
+@media screen and (max-width: 479px) {
+    .movie {
+        margin: 12px 0;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .movie {
+        max-width: calc((100% - 24px ) / 2);
+
+        &:nth-of-type(2n + 1) {
+            margin-left: 0;
+        }
+
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .movie {
+        max-width: calc((100% - 48px) / 3);
+
+        &:nth-of-type(3n + 1) {
+            margin-left: 0;
+        }
+
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .movie {
+        max-width: calc((100% - 72px) / 4);
+
+        &:nth-of-type(4n + 1) {
+            margin-left: 0;
+        }
+
+        &:nth-of-type(4n) {
+            margin-right: 0;
+        }
+    }
+}
